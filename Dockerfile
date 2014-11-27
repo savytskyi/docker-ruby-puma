@@ -16,6 +16,6 @@ RUN curl -O http://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.5.tar.bz2 \
   && ./configure --prefix=/usr/local \
   && make && make install \
   && /usr/local/bin/gem install --no-rdoc --no-ri bundler nokogiri puma \
-  && rm -r /usr/local/src && chown -R ruby: /usr/local/lib/ruby/gems
+  && rm -r /usr/local/src && chown -R ruby: /usr/local
 
 USER ruby
