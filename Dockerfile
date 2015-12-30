@@ -3,7 +3,7 @@ FROM debian:latest
 MAINTAINER Thom May <thom@scaleworks.io>
 
 ENV DEBIAN_FRONTEND noninteractive
-RUN apt-get -y update && apt-get install -qy build-essential libffi-dev libgdbm-dev libncurses5-dev libreadline-dev libssl-dev libyaml-dev zlib1g-dev curl libyaml-0-2 libxml2-dev libxslt-dev libpq-dev
+RUN apt-get -y update && apt-get install -qy build-essential libffi-dev libgdbm-dev libncurses5-dev libreadline-dev libssl-dev libyaml-dev zlib1g-dev curl libyaml-0-2 libxml2-dev libxslt-dev libpq-dev postgresql-client
 
 RUN mkdir -p /srv && useradd -d /srv -m -s /bin/bash ruby && chown -R ruby /srv
 RUN mkdir -p /usr/local/src
